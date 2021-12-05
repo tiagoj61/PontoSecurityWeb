@@ -1,0 +1,129 @@
+_type: export
+__export_format: 4
+__export_date: 2021-12-02T19:33:20.566Z
+__export_source: insomnia.desktop.app:v2021.6.0
+resources:
+  - _id: req_ff0089050b5a419ebecfca2b7e5d4221
+    parentId: fld_b7a9149de98642a3b2e601e122fccd2f
+    modified: 1638470815008
+    created: 1638451945487
+    url: "{{ _.url }}{{ _.url_padrao }}login"
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"codigo":12312,	
+        	"enderecoMacDevices":["123123","123123123"]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2b6db59b58d048288f66d03d3895b6ef
+    authentication: {}
+    metaSortKey: -1638451979243
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_b7a9149de98642a3b2e601e122fccd2f
+    parentId: wrk_bd88811a5d61462da91d2d89488640ae
+    modified: 1638452142544
+    created: 1638451920961
+    name: Funcionario
+    description: ""
+    environment:
+      url_padrao: funcionario/
+    environmentPropertyOrder:
+      "&":
+        - url_padrao
+    metaSortKey: -1638451920961
+    _type: request_group
+  - _id: wrk_bd88811a5d61462da91d2d89488640ae
+    parentId: null
+    modified: 1638451910309
+    created: 1638451910309
+    name: Ponto security
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_78bc2720c02041ec9596d8ea2d5a00e3
+    parentId: fld_b7a9149de98642a3b2e601e122fccd2f
+    modified: 1638470815420
+    created: 1638451979193
+    url: "{{ _.url }}{{ _.url_padrao }}logout"
+    name: Logout
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"codigo":12312,	
+        	"enderecoMacDevices":["123123","123123123"]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_85938852ba684234aa2d3836baf865a4
+    authentication: {}
+    metaSortKey: -1638451979193
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_804b3b779fc5af56fbda7f8150b6c6d30ec3ec1f
+    parentId: wrk_bd88811a5d61462da91d2d89488640ae
+    modified: 1638452023348
+    created: 1638451910333
+    name: Base Environment
+    data:
+      url: http://localhost:8081/PontoSecurity/app/home/listFuncionario
+    dataPropertyOrder:
+      "&":
+        - url
+    color: null
+    isPrivate: false
+    metaSortKey: 1638451910333
+    _type: environment
+  - _id: jar_804b3b779fc5af56fbda7f8150b6c6d30ec3ec1f
+    parentId: wrk_bd88811a5d61462da91d2d89488640ae
+    modified: 1638451910335
+    created: 1638451910335
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_fdfcd2a0fef14a268507bc9d845c1ddc
+    parentId: wrk_bd88811a5d61462da91d2d89488640ae
+    modified: 1638451910319
+    created: 1638451910319
+    fileName: Ponto security
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_0e0fac9695be446f9c585f76469128fb
+    parentId: env_804b3b779fc5af56fbda7f8150b6c6d30ec3ec1f
+    modified: 1638452080238
+    created: 1638452017833
+    name: Develop
+    data:
+      url: http://localhost:8081/PontoSecurity/rest/
+    dataPropertyOrder:
+      "&":
+        - url
+    color: "#c800ff"
+    isPrivate: false
+    metaSortKey: 1638452017833
+    _type: environment

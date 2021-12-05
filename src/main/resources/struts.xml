@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.multipart.maxSize" value="52428800" />
+    <constant name="struts.patternMatcher" value="namedVariable"/>
+    <constant name="struts.action.extension" value=","/>
+    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.serve.static.browserCache" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.locale" value="pt_BR" />
+    <constant name="struts.custom.i18n.resources" value="struts"/>
+</struts>
+
